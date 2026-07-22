@@ -1,0 +1,31 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.item {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    color: var(--main);
+    background: var(--badges);
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+
+.item svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
