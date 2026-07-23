@@ -1,0 +1,164 @@
+.wrapper {
+    width: 100%;
+    min-width: 0;
+    min-height: 384px;
+    align-self: start;
+    padding: 44px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 16px;
+}
+
+
+.wrapper h2 {
+    margin: 0;
+    color: var(--main);
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+
+.wrapper>p {
+    margin: 8px 0 24px;
+    color: var(--gray);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+.wrapper form {
+    display: grid;
+    gap: 16px;
+}
+
+
+.field {
+    display: grid;
+    gap: 4px;
+}
+
+
+.inputControl {
+    position: relative;
+}
+
+
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+
+.visibleLabel {
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    left: 16px;
+    padding: 0 4px;
+    color: var(--button);
+    background-color: #ffdfdf;
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+
+.field input {
+    width: 100%;
+    height: 56px;
+    padding: 0 48px 0 18px;
+    color: var(--main);
+    background-color: var(--inputs);
+    border: 1px solid transparent;
+    border-radius: 12px;
+    outline: none;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    transition:
+        background-color 200ms ease,
+        border-color 200ms ease;
+}
+
+
+.field input::placeholder {
+    color: var(--gray);
+}
+
+
+.field input:focus {
+    border-color: var(--grey-green);
+}
+
+
+.field input[aria-invalid="true"] {
+    background-color: rgb(228 72 72 / 12%);
+    border-color: var(--button);
+}
+
+
+.errorIcon {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 20px;
+    height: 20px;
+    color: var(--button);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+
+.error {
+    color: var(--button);
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 18px;
+}
+
+
+.wrapper button {
+    width: 100%;
+    height: 56px;
+    margin-top: 8px;
+    color: var(--white);
+    background-color: var(--grey-green);
+    border: 0;
+    border-radius: 200px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+
+.wrapper button:hover:not(:disabled),
+.wrapper button:focus-visible:not(:disabled) {
+    background-color: var(--green-hover);
+}
+
+
+.wrapper button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+
+@media (max-width: 950px) {
+    .wrapper {
+        min-height: auto;
+        padding: 32px;
+    }
+}
