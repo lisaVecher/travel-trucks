@@ -1,0 +1,139 @@
+.gallery {
+    width: 638px;
+    min-width: 0;
+    min-height: 677px;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+
+.mainSwiper {
+    width: 100%;
+    min-height: 504px;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 20px;
+    --swiper-navigation-color: var(--white);
+    --swiper-navigation-size: 28px;
+}
+
+
+.mainSwiper :global(.swiper-wrapper),
+.mainSwiper :global(.swiper-slide) {
+    height: 100%;
+}
+
+
+.mainImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 504px;
+    overflow: hidden;
+    background: var(--gray-light);
+    border-radius: 20px;
+}
+
+
+.mainImage img,
+.thumbImage img {
+    object-fit: cover;
+}
+
+
+.mainSwiper :global(.swiper-button-prev),
+.mainSwiper :global(.swiper-button-next) {
+    width: 44px;
+    height: 44px;
+    color: var(--white);
+    background: rgb(16 24 40 / 45%);
+    border-radius: 50%;
+}
+
+
+.mainSwiper :global(.swiper-button-prev)::after,
+.mainSwiper :global(.swiper-button-next)::after {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.thumbsSwiper {
+    width: 100%;
+    height: 145px;
+    flex: 0 0 145px;
+    margin-top: 28px;
+}
+
+
+.thumbsSwiper :global(.swiper-wrapper),
+.thumbsSwiper :global(.swiper-slide) {
+    height: 145px;
+}
+
+
+.thumbImage {
+    position: relative;
+    width: 100%;
+    height: 145px;
+    overflow: hidden;
+    background: var(--gray-light);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+
+.thumbsSwiper :global(.swiper-slide-thumb-active) .thumbImage {
+    border-color: var(--grey-green);
+}
+
+
+.empty {
+    width: 638px;
+    min-height: 677px;
+    display: grid;
+    place-content: center;
+    align-self: stretch;
+    color: var(--text);
+    background: var(--inputs);
+    border-radius: 20px;
+}
+
+
+@media (max-width: 950px) {
+
+
+    .gallery,
+    .empty {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .gallery {
+        min-height: auto;
+    }
+
+
+    .mainSwiper,
+    .mainImage {
+        min-height: 360px;
+    }
+
+
+    .thumbsSwiper,
+    .thumbsSwiper :global(.swiper-wrapper),
+    .thumbsSwiper :global(.swiper-slide),
+    .thumbImage {
+        height: 100px;
+    }
+
+
+    .thumbsSwiper {
+        flex-basis: 100px;
+        margin-top: 16px;
+    }
+}
